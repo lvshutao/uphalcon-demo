@@ -1,0 +1,10 @@
+paths:
+    tests: cptests
+    output: cptests/_output
+    data: cptests/_data
+    support: cptests/_support
+    envs: cptests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
