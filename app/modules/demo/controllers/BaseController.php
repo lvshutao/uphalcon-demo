@@ -2,18 +2,19 @@
 
 namespace app\modules\demo\controllers;
 
-use lyu\uphalcon\controllers\ViewController;
-use lyu\uphalcon\library\U;
+use lyu\oauth\controller\BaseUserController;
+use lyu\uphalcon\library\Navigation;
 
-class BaseController extends ViewController
+/**
+ * Class BaseController
+ * @package app\modules\demo\controllers
+ * 用户必须登录的页面，继承 BaseUserController 即可
+ */
+class BaseController extends BaseUserController
 {
-    public function initialize()
+    protected function whenNotLogin()
     {
-        parent::initialize();
-
-        U::$di->i18n->domain('index');
-        $this->view->setVars([
-            'lang' => U::$di->i18n->bestLanguage(),
-        ]);
+        // 如果用户没有登录，跳转到此页面
+        Navigation::to('/');
     }
 }
