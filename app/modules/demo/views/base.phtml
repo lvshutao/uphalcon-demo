@@ -14,15 +14,17 @@
         {# CDN 资源 #}
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap core CSS -->
-        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://use.fontawesome.com/ab418d22ce.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://v3.bootcss.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <?php } else { ?>
         {# 本地资源 #}
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <?php } ?>
 
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="http://v3.bootcss.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -90,6 +92,7 @@
     <script src="http://v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 <?php } else { ?>
     {# 本地资源 #}
+    <script type="text/javascript" src="public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <?php } ?>
 {# 插入其它 js 到页面的底部 #}
 {% block footerAssets %}{% endblock %}
