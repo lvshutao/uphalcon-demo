@@ -1,6 +1,7 @@
 <?php
 // lyu\uphalcon\services\UPhpDebugBar::start();
 // 程序配置
+// cp config.copy.php config.php
 return new \Phalcon\Config([
     'version' => '1.0',
     // todo 数据库配置需要修改
@@ -34,7 +35,8 @@ return new \Phalcon\Config([
         'migrationsDir' => APP_PATH . '/migrations/',
         'cacheDir' => BASE_PATH . '/cache/',
         'baseUri' => preg_replace('/public([\/\\\\])index.php$/', '', $_SERVER["PHP_SELF"]),
-        'timezone' => 'PRC'
+        'timezone' => 'PRC',
+        'app_id' => ''
     ],
 
     'printNewLine' => true,

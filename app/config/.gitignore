@@ -3,6 +3,7 @@ config-development.php
 config-test.php
 config-local.php
 env.php
+config.php
 
 public.key
 private.key
